@@ -1,8 +1,10 @@
 class Pet:
-    def __init__(self, name, age, master):
+    def __init__(self, name, age, master, height, weight):
         self.name = name
         self.age = age
         self.master = master
+        self.height = height
+        self.weight = weight
 
     def run(self):
         return f'{self.name} is running'
@@ -18,11 +20,6 @@ class Pet:
 
 
 class Dog(Pet):
-    def __init__(self, name, age, master, height, weight):
-        super().__init__(name, age, master)
-        self.height = height
-        self.weight = weight
-
     def bark(self):
         return f'{self.name} is barking'
 
@@ -45,7 +42,7 @@ print(f'{dog.name} age {dog.age}')
 print(dog.sleep())
 print(dog.bark())
 
-cat = Cat('Felix', 3, 'Alice')
+cat = Cat('Felix', 3, 'Alice', 20, 6)
 print(cat.run())
 print(cat.jump())
 cat.birthday()
@@ -53,7 +50,7 @@ print(f'{cat.name} age {cat.age}')
 print(cat.sleep())
 print(cat.meow())
 
-parrot = Parrot('Ruby', 1, 'Oliver')
+parrot = Parrot('Ruby', 1, 'Oliver', 10, 1)
 print(parrot.run())
 print(parrot.jump())
 parrot.birthday()
