@@ -20,11 +20,17 @@ class Pet:
 
 
 class Dog(Pet):
+    def __init__(self, name, age, master, height, weight):
+        super().__init__(name, age, master, height, weight)
+
     def bark(self):
         return f'{self.name} is barking'
 
 
 class Cat(Pet):
+    def __init__(self, name, age, master, height, weight):
+        super().__init__(name, age, master, height, weight)
+
     def meow(self):
         return f'{self.name} is meowing'
 
@@ -57,3 +63,6 @@ parrot.birthday()
 print(f'{parrot.name} age {parrot.age}')
 print(parrot.sleep())
 print(parrot.fly())
+
+print(dog)
+print(parrot)
